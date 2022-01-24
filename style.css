@@ -26,6 +26,7 @@ p {
 	font-size: 5vw;
 	font-weight: bold;
 	color: white;
+	background: transparent;
 }
   
 svg {
@@ -37,7 +38,7 @@ svg {
   
 circle {
     stroke-width: 20px;
-    fill: none;    
+    fill: none;
 }
 
 circle:nth-child(1) {
@@ -47,7 +48,6 @@ circle:nth-child(1) {
 circle:nth-child(2) {
     stroke: rgb(255, 0, 0); 
     position: relative;
-    z-index: 1;    
 }
 
 .circle_box:nth-child(1) circle:nth-child(2) {
@@ -56,11 +56,10 @@ circle:nth-child(2) {
     stroke-dashoffset: calc((100 * 6) - ((100 * 6) * 50) / 100); 
 }
 
-
-
-#SecondProgress {
+.circle_box {
 	position: absolute;
-	top: 25%;
-	left: 65%;
-	transform: translate(-50%, -50%);
+	top: 75%;
+	left: 50%;
+	transform: translate(80%, -60%);
+	z-index: -1;
 }
