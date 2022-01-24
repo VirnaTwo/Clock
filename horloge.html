@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horloge</title>
+</head>
+<body>
+	<div>
+		<H1>Horloge</H1>
+	</div>
+
+	<style>
+		h1 {
+			position: absolute;
+			margin: auto;
+			padding: auto;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	</style>
+
+	<script>
+		const wait_s = async ms => new Promise(done => setTimeout(done, ms));
+		async function Horloge() {
+			while (true) {
+				document.getElementsByTagName('h1')[0].textContent = `${new Date().getHours()}h : ${new Date().getMinutes()}m : ${new Date().getSeconds()}s`
+				await wait_s(1000)	
+			}
+		}
+		Horloge()
+	</script>
+
+</body>
+</html>
