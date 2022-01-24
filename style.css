@@ -1,22 +1,66 @@
+* {
+	background-color: #36393f;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 .containerTime {
-    font-family: monospace, arial;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	font-family: "Gill Sans", arial;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .containerDate {
-    font-family: monospace, arial;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	font-family: "Gill Sans", monospace, arial;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 p {
-    padding: 0px;
-    font-size: 5vw;
-    font-weight: bold;
-    color: white;
+	padding: 0px;
+	font-size: 5vw;
+	font-weight: bold;
+	color: white;
+}
+  
+svg {
+    width: 200px;
+    height: 200px;    
+    transform: rotate(-90deg);
+    overflow: visible;
+} 
+  
+circle {
+    stroke-width: 20px;
+    fill: none;    
+}
+
+circle:nth-child(1) {
+	stroke: rgb(255, 255, 255)
+}
+
+circle:nth-child(2) {
+    stroke: rgb(255, 0, 0); 
+    position: relative;
+    z-index: 1;    
+}
+
+.circle_box:nth-child(1) circle:nth-child(2) {
+    stroke-dashoffset: calc(100 * 6);
+    stroke-dasharray: calc(100 * 6);
+    stroke-dashoffset: calc((100 * 6) - ((100 * 6) * 50) / 100); 
+}
+
+
+
+#SecondProgress {
+	position: absolute;
+	top: 25%;
+	left: 65%;
+	transform: translate(-50%, -50%);
 }
