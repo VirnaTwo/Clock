@@ -5,22 +5,35 @@
 	margin: 0;
 }
 
-.hidden
-
 .containerTime {
 	font-family: "Gill Sans", arial;
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
+	top: 50vh;
+	transform: translate(0%, -50%);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.containerDate {
-	font-family: "Gill Sans", monospace, arial;
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+circle {
+	stroke: lightgrey;
+	stroke-dasharray: 47.1vw;
+
+	fill: transparent;
+}
+
+circle:nth-child(1) {
+	stroke-width: 2.3vw;
+}
+
+circle:nth-child(2) {
+	stroke-width: 2vw;
+}
+
+@media (max-width: 1200px) {
+	.containerTime {
+	  flex-direction: column;
+	}
 }
 
 p {
@@ -31,8 +44,9 @@ p {
 	background: transparent;
 }
 
-progress {
-	height: 2.5vh;
-	width: 10vw;
-	margin: 0 1vw;
+text {
+	font-family: monospace;
+	font-weight: bold;
+	color: white;
+	font-size: 3.5vw;
 }
