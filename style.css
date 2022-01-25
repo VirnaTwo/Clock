@@ -5,6 +5,8 @@
 	margin: 0;
 }
 
+.hidden
+
 .containerTime {
 	font-family: "Gill Sans", arial;
 	position: absolute;
@@ -28,38 +30,9 @@ p {
 	color: white;
 	background: transparent;
 }
-  
-svg {
-    width: 200px;
-    height: 200px;    
-    transform: rotate(-90deg);
-    overflow: visible;
-} 
-  
-circle {
-    stroke-width: 20px;
-    fill: none;
-}
 
-circle:nth-child(1) {
-	stroke: rgb(255, 255, 255)
-}
-
-circle:nth-child(2) {
-    stroke: rgb(255, 0, 0); 
-    position: relative;
-}
-
-.circle_box:nth-child(1) circle:nth-child(2) {
-    stroke-dashoffset: calc(100 * 6);
-    stroke-dasharray: calc(100 * 6);
-    stroke-dashoffset: calc((100 * 6) - ((100 * 6) * 50) / 100); 
-}
-
-.circle_box {
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translate(80%, -60%);
-	z-index: -1;
+progress {
+	height: 2.5vh;
+	width: 10vw;
+	margin: 0 1vw;
 }
