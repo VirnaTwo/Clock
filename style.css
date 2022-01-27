@@ -1,8 +1,11 @@
 * {
-	background-color: #36393f;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+body {
+	background-color: #36393f;
 }
 
 .containerTime {
@@ -51,10 +54,65 @@ circle:nth-child(2) {
 	}
 }
 
-
 text {
 	font-family: monospace;
 	font-weight: bold;
 	color: white;
 	font-size: 3.5vw;
+}
+
+.btn{
+	border: 2px solid #736b5e;
+	border-radius: 3px;
+	color: white;
+	background: transparent;
+	transition: 555ms;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background: rgb(85, 67, 44);
+}
+
+.btn:active{
+	transition: 0s;
+	background: rgb(45, 27, 4);
+}
+
+.windowDrag{
+  position: absolute;
+  z-index: 1;
+
+  width: 15%;
+  height: 25%;
+
+  border: 2px solid #736b5e;
+  border-radius: 3px;
+
+  color: white;
+  background-color: #181a1b;
+
+  display: none;
+  flex-direction: column;
+}
+
+.windowOption {
+	width: 100%;
+	height: 12%;
+	display: flex;
+	margin: 2% 0;
+	justify-content: center;
+}
+
+.windowDragHeader {
+  width: 80%;
+  cursor: move;
+  border: double 3px black;
+  margin-right: 5px;
+  background-color: #36393f;
+}
+
+.WindowContent {
+	display: flex;
+	justify-content: center;
 }
