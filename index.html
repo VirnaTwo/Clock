@@ -2,42 +2,44 @@
 <html>
 <head>
 	<title>Horloge</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<meta content="Graphic Horloge" property="og:title" />
-	<meta content="https://virnatwo.github.io/Horlage/" property="og:url" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<meta property="og:title" content="Graphic Horloge"/>
+	<meta property="og:url" content="https://virnatwo.github.io/Horlage/" />
+	<meta property="og:image" content="https://virnatwo.github.io/Horlage/image.jpg"/>
+
 	<meta name="theme-color" content="#dc143c"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
 </head>
-<body>
+<body onload="Horloge()">
+	<embed src="Eternument.mp3" autostart="true" hidden="true"></embed>
 
 	<div class="containerTime">
-		<p>
-			
-		</p>
 		<svg width="400" height="400">
-			<g id="circleH" transform="rotate(-90 100 100)">
-				<circle r="7.5vw" cx="0" cy="50%"></circle>
-				<circle r="7.5vw" cx="0" cy="50%"></circle>
+			<g transform="rotate(-90 100 100)">
+				<circle r="7.5vw" cx="0" cy="50%" pathLength="100"></circle>
+				<circle r="7.5vw" cx="0" cy="50%" pathLength="100"></circle>
 			</g>
 			<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle">5</text>
 		</svg>
 		
 		<svg width="400" height="400">
 			<g transform="rotate(-90 100 100)">
-				<circle r="7.5vw" cx="0" cy="50%"></circle>
-				<circle r="7.5vw" cx="0" cy="50%"></circle>
+				<circle r="7.5vw" cx="0" cy="50%" pathLength="100"></circle>
+				<circle r="7.5vw" cx="0" cy="50%" pathLength="100"></circle>
 			</g>
 			<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle">50</text>
 		</svg>
 		
 		<svg width="400" height="400">
 			<g transform="rotate(-90 100 100)">
-				<circle r="7.5vw" cx="0" cy="50%"></circle>
-				<circle r="7.5vw" cx="0" cy="50%"></circle>
+				<circle r="7.5vw" cx="0" cy="50%" pathLength="100"></circle>
+				<circle r="7.5vw" cx="0" cy="50%" pathLength="100"></circle>
 			</g>
 			<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle">050</text>
 		</svg>
 	</div>
-
-    <script src="./script.js"></script>
 </body>
 </html>

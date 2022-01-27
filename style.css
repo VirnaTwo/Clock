@@ -17,16 +17,17 @@
 
 circle {
 	stroke: lightgrey;
-	stroke-dasharray: 47.1vw;
+	stroke-dasharray: 100;
 	fill: transparent;
 }
 
 circle:nth-child(1) {
-	stroke-width: 2.3vw;
+	stroke-width: 10;
 }
 
 circle:nth-child(2) {
-	stroke-width: 2vw;
+	stroke-width: 30;
+	stroke-linecap: round;
 }
 
 @media (max-width: 1200px) {
@@ -50,13 +51,6 @@ circle:nth-child(2) {
 	}
 }
 
-p {
-	padding: 0px;
-	font-size: 5vw;
-	font-weight: bold;
-	color: white;
-	background: transparent;
-}
 
 text {
 	font-family: monospace;
