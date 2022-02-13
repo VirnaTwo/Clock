@@ -1,38 +1,118 @@
 * {
-	background-color: #36393f;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
-.hidden
+body {
+	background-color: #36393f;
+}
 
 .containerTime {
 	font-family: "Gill Sans", arial;
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
+	top: 50vh;
+	transform: translate(0%, -50%);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
-.containerDate {
-	font-family: "Gill Sans", monospace, arial;
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+circle {
+	stroke: lightgrey;
+	stroke-dasharray: 100;
+	fill: transparent;
 }
 
-p {
-	padding: 0px;
-	font-size: 5vw;
+circle:nth-child(1) {
+	stroke-width: 10;
+}
+
+circle:nth-child(2) {
+	stroke-width: 30;
+	stroke-linecap: round;
+}
+
+@media (max-width: 1200px) {
+	.containerTime {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	svg {
+		height: 50px;
+	}
+}
+
+@media (min-width: 2300px) {
+	.containerTime {
+		flex-direction: row;
+	}
+	circle {
+		display: none;
+	}
+}
+
+text {
+	font-family: monospace;
 	font-weight: bold;
 	color: white;
-	background: transparent;
+	font-size: 3.5vw;
 }
 
-progress {
-	height: 2.5vh;
-	width: 10vw;
-	margin: 0 1vw;
+.btn{
+	border: 2px solid #736b5e;
+	border-radius: 3px;
+	color: white;
+	background: transparent;
+	transition: 555ms;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background: rgb(85, 67, 44);
+}
+
+.btn:active{
+	transition: 0s;
+	background: rgb(45, 27, 4);
+}
+
+.windowDrag{
+  position: absolute;
+  z-index: 1;
+
+  width: 15%;
+  height: 25%;
+
+  border: 2px solid #736b5e;
+  border-radius: 3px;
+
+  color: white;
+  background-color: #181a1b;
+
+  display: none;
+  flex-direction: column;
+}
+
+.windowOption {
+	width: 100%;
+	height: 12%;
+	display: flex;
+	margin: 2% 0;
+	justify-content: center;
+}
+
+.windowDragHeader {
+  width: 80%;
+  cursor: move;
+  border: double 3px black;
+  margin-right: 5px;
+  background-color: #36393f;
+}
+
+.WindowContent {
+	display: flex;
+	justify-content: center;
 }
