@@ -1,4 +1,4 @@
-function Horloge() {
+function Clock() {
 	let CirclesAndDate = [
 		[document.getElementsByTagName('circle')[1], new Date().getHours()/24*100,
 		`rgb(${new Date().getMinutes()/60*255},${new Date().getSeconds()/60*255}, ${new Date().getHours()/24*255})`,
